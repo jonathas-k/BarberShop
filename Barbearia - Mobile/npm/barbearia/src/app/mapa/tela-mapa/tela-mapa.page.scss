@@ -1,0 +1,38 @@
+#mapId{
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+
+.logo{
+    position: relative;
+    margin-top: 10px;
+    left: 7.7rem;
+    width: 65px;
+    height: 65px;
+}
+
+.voltar{
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    width: 85px;
+    height: 82px;
+}
+
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-direction: column;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+}
+
+ion-icon{
+    width: 70px;
+    height: 70px;
+}

@@ -1,0 +1,45 @@
+.logo{
+    position: relative;
+    margin-top: 10px;
+    left: 7.7rem;
+    width: 65px;
+    height: 65px;
+}
+
+.voltar{
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    width: 85px;
+    height: 82px;
+}
+
+.body{
+    --ion-background-color:#fff;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.container img{
+    height: 100px;
+    width: 100px;
+}
+
+ion-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ion-list img{
+    position: relative;
+    height: 32px;
+    width: 32px;
+}
