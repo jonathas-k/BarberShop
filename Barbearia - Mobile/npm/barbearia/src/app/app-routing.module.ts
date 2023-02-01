@@ -4,12 +4,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+
   },
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
+  
   },
   {
     path: 'tela-cadas',
@@ -40,10 +42,7 @@ const routes: Routes = [
     path: 'vendas',
     loadChildren: () => import('./Loja/vendas/vendas.module').then( m => m.VendasPageModule)
   },
-  {
-    path: 'servicos',
-    loadChildren: () => import('./servicos/servicos/servicos.module').then( m => m.ServicosPageModule)
-  },
+  
 ];
 
 @NgModule({
