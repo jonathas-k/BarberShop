@@ -40,13 +40,52 @@
 .line2{
     border: 1px solid #000;
     height: 100vh; 
-    margin-top: -215px; 
+    margin-top: -493px; 
 }
 
 .produtos-line1{
+    display: block;
     position: relative;
     left: -73px;
     text-align: center;
+}
+
+.produtos-line2{
+    display: block;
+    position: relative;
+    top: -688px;
+    left: 73px;
+    text-align: center;
+}
+
+.produtos-line1 ion-button{
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 21px;
+    width: 110px;
+    height: 2rem;
+}
+
+.produtos-line1 .pomada{
+    width: 65px;
+    height: 65px;
+}   
+
+.produtos-line2 .serum{
+    width: 40px;
+    height: 90px;
+} 
+
+.produtos-line2 ion-button{
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 21px;
+    width: 110px;
+    height: 2rem;
 }
 
 
