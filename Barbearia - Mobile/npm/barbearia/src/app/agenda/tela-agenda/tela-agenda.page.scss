@@ -1,0 +1,71 @@
+.body{
+    --ion-background-color: #fff;
+    font-family: 'Inika';
+}
+
+.logo{
+    position: relative;
+    margin-top: 10px;
+    left: 7.3em;
+    width: 75px;
+    height: 75px;
+}
+
+.voltar{
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    width: 85px;
+    height: 82px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.line{
+    border: 1px solid #000;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.calendario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.calendario .line{
+    margin-top: 10px;
+}
+
+.agendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.agendar ion-button{
+    color: #000;
+    border-radius: 30px;
+    border: 1px solid #000;
+    width: 80%;
+    font-family: 'Inika';
+    font-weight: 800;
+    margin-top: 20px; 
+}
+
+.agendar ion-button:hover{
+    color: #000;
+    transition: 0.5s ease;
+    background-color: #a8a8a8;
+}
+
+  

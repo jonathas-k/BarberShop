@@ -6,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tela-agenda.page.scss'],
 })
 export class TelaAgendaPage implements OnInit {
-
-
-
-
+  
   constructor() { }
 
   ngOnInit() {

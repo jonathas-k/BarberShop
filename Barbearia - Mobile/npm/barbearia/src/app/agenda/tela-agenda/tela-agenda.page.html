@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>tela-agenda</ion-title>
+    <ion-button class="voltar" color="--ion-background-color:#323131;" routerLink="/tela-principal">
+      <img id="img_voltar" src="assets/imagens/voltar.png" alt="">
+    </ion-button>
+    <img class="logo" src="assets/imagens/logo.png" alt="">
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-datetime [isDateEnabled]="isWeekday" locale="pt-br" hourCycle="h12"></ion-datetime>
+<ion-content class="body">
+  <div class="title">
+      <h3><b>AGENDAMENTO</b></h3>
+      <div class="line"></div>
+  </div>
+
+<div class="calendario">
+  <ion-datetime locale="pt-br" minuteValues="0,30" hourValues="8,9,10,15,16,17">
+    <span slot="time-label">Selecione o Horário:</span>
+  </ion-datetime>
+  <div class="line"></div>
+</div>
+
+<div class="agendar">
+  <ion-button color=" --ion-background-color: #fff;">Confirmar</ion-button>
+</div>
+
+
+
+
 </ion-content>
