@@ -27,8 +27,15 @@
 }
 
 .container img{
+    position: relative;
+    left: 5px;
     height: 100px;
     width: 100px;
+}
+
+.container h3{
+    position: relative;
+    left: 5px;
 }
 
 .line{
