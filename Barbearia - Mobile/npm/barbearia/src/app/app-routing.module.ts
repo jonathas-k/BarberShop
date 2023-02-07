@@ -50,6 +50,10 @@ const routes: Routes = [
     path: 'tela-comprar',
     loadChildren: () => import('./comprar/tela-comprar/tela-comprar.module').then( m => m.TelaComprarPageModule)
   },
+  {
+    path: 'tela-servico',
+    loadChildren: () => import('./ServicosCortes/tela-servico/tela-servico.module').then( m => m.TelaServicoPageModule)
+  },
   
 ];
 

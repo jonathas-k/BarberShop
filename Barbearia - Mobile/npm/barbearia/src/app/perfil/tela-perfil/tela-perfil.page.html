@@ -4,9 +4,9 @@
       <img id="img_voltar" src="assets/imagens/voltar.png" alt="">
     </ion-button>
 
-    <ion-button class="bt_add" color="--ion-background-color:#323131;">
+    <ion-button class="bt_add" (click)="edit()" color="--ion-background-color:#323131;">
       <ion-icon class="icons" name="create-outline"></ion-icon>
-  </ion-button>
+    </ion-button>
 
   <ion-button class="bt_config" color="--ion-background-color:#323131;" routerLink="/config">
     <ion-icon class="icons" name="settings-outline"></ion-icon>
@@ -15,42 +15,75 @@
 </ion-header>
 
 <ion-content class="body">
-  <img class="userP" src="assets/imagens/userPerfil.png" alt="Foto_Perfil">
-  <div class="circle">
-    <ion-icon class="camera" name="camera-outline"></ion-icon>
+  <div *ngIf="!editMode">
+    <img class="userP" src="assets/imagens/userPerfil.png" alt="Foto_Perfil">
+    <div class="circle">
+      <ion-icon class="camera" name="camera-outline"></ion-icon>
+    </div>
+
+    <!-- Nome --> 
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Nome:</ion-label>
+      <img src="assets/imagens/user.png" alt="">
+    </ion-item>
+
+    <!-- Email -->
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Email:</ion-label>
+      <img src="assets/imagens/email.png" alt="">
+    </ion-item>
+
+  <!-- Senha -->
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Senha:</ion-label>
+      <img src="assets/imagens/senha.png" alt="">
+    </ion-item>
+    
+  <!-- Telefone -->
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Telefone:</ion-label>
+      <img src="assets/imagens/telefone.png" alt="">
+    </ion-item>
   </div>
 
-  <!-- Nome --> 
-  <ion-item class="perfil" lines="none">
-    <ion-label class="titulo" position="floating">Nome:</ion-label>
-    <ion-input type="text" name="nome"></ion-input>
-    <div class="lines"></div>
-    <img src="assets/imagens/user.png" alt="">
-  </ion-item>
+  <div *ngIf="editMode">
+    <img class="userP" src="assets/imagens/userPerfil.png" alt="Foto_Perfil">
+    <div class="circle">
+      <ion-icon class="camera" name="camera-outline"></ion-icon>
+    </div>
 
-  <!-- Email -->
-  <ion-item class="perfil" lines="none">
-    <ion-label class="titulo" position="floating">Email:</ion-label>
-    <ion-input type="email" name="email"></ion-input>
-    <div class="lines"></div>
-    <img  id="mail" src="assets/imagens/email.png" alt="">
-  </ion-item>
+    <!-- Nome --> 
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Nome:</ion-label>
+      <ion-input type="text" name="nome"></ion-input>
+      <div class="lines"></div>
+      <img class="position" src="assets/imagens/user.png" alt="">
+    </ion-item>
 
- <!-- Senha -->
-  <ion-item class="perfil" lines="none">
-    <ion-label class="titulo" position="floating">Senha:</ion-label>
-    <ion-input type="password" name="senha"></ion-input>
-    <div class="lines"></div>
-    <img src="assets/imagens/senha.png" alt="">
-  </ion-item>
-  
-<!-- Telefone -->
-<ion-item class="perfil" lines="none">
-  <ion-label class="titulo" position="floating">Telefone:</ion-label>
-  <ion-input name="telefone" type="tel"></ion-input>
-  <div class="lines"></div>
-  <img src="assets/imagens/telefone.png" alt="">
-</ion-item>
+    <!-- Email -->
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Email:</ion-label>
+      <ion-input type="email" name="email"></ion-input>
+      <div class="lines"></div>
+      <img class="position"  id="mail" src="assets/imagens/email.png" alt="">
+    </ion-item>
+
+  <!-- Senha -->
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Senha:</ion-label>
+      <ion-input type="password" name="senha"></ion-input>
+      <div class="lines"></div>
+      <img class="position" src="assets/imagens/senha.png" alt="">
+    </ion-item>
+    
+  <!-- Telefone -->
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Telefone:</ion-label>
+      <ion-input name="telefone" type="tel"></ion-input>
+      <div class="lines"></div>
+      <img class="position" src="assets/imagens/telefone.png" alt="">
+    </ion-item>
+  </div>
 
 
 </ion-content>

@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaPerfilPage implements OnInit {
 
+  public editMode = false
+
   constructor() { }
 
-  
+  edit(){
+    switch (this.editMode){
+      case false:
+        this.editMode = true;
+        break;
+
+      case true:
+        this.editMode = false;
+        break;
+    }
+  }
+
   ngOnInit() {
 
   }

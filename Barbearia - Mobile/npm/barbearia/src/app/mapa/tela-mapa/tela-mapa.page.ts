@@ -18,35 +18,78 @@ export class TelaMapaPage {
 
   map : Leaflet.Map;
 
+  public editMode = false
+  teste = 0
+
   constructor(
     private geolocation: Geolocation,
     private nativeGeocoder: NativeGeocoder
-  ) {}
-
+  ) { }
+    
   geoInformation() {
     this.geolocation.getCurrentPosition().then((data) => {
       this.lat = data.coords.latitude;
       this.long = data.coords.longitude;
-      this.accuracy = data.coords.accuracy;
+      // this.accuracy = data.coords.accuracy;
      }).catch((error) => {
        alert(error);
      });
   }
 
-  leafletMap() {
+  ionViewDidEnter() {
+    this.lat = -22.231977193122866
+    this.long = -45.929504787972036
+    this.leafletMap(this.lat, this.long);
+  }
+
+  leafletMap(lat, Long) {
     // -22.231977193122866, -45.929504787972036 <-- coordenada Senac
     
-    this.map = Leaflet.map('mapId').setView([-22.231977193122866, -45.929504787972036],16);
-    Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'edupala.com © Angular LeafLet',
-    }).addTo(this.map);
+    this.map = Leaflet.map('mapId').setView([lat, Long],16);
+    
+    Leaflet.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
+      
+    Leaflet.marker([lat, Long]).addTo(this.map)
+    .bindPopup('Senac')
+    .openPopup();
 
-    const markPoint = Leaflet.marker([-22.231977193122866, -45.929504787972036]);
-    this.map.addLayer(markPoint);
   }
 
-  /** Remove map when we have multiple map object */
-  ngOnInit() {
-    this.leafletMap();
+  rota(){
+    if(this.teste == 0){
+      this.teste++
+      console.log(this.teste)
+      this.geolocation.getCurrentPosition().then((data) => {
+        this.lat = data.coords.latitude;
+        this.long = data.coords.longitude;
+        Leaflet.marker([this.lat, this.long]).addTo(this.map).bindPopup('Você está<br>Aqui').openPopup();
+        Leaflet.marker([-22.231977193122866, -45.929504787972036]).addTo(this.map).bindPopup('Senac').openPopup();
+
+        antPath([[this.lat, this.long], [-22.231977193122866, -45.929504787972036]],
+          { color: '#FF0000', weight: 5, opacity: 0.6 })
+          .addTo(this.map);
+      }).catch((error) => {
+        alert(error);
+      });
+    }
   }
+
+
+  removeMap(){
+    this.map.remove()
+    this.teste = 0
+  }
+
+  edit(){
+    switch (this.editMode){
+      case false:
+        this.editMode = true;
+        break;
+
+      case true:
+        this.editMode = false;
+        break;
+    }
+  }
+
 }
