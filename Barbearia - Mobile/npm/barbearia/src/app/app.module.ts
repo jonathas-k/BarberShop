@@ -5,8 +5,14 @@ import { IonicModule, IonicRouteStrategy} from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+// Imports Firebase
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+
 
 
 
@@ -17,7 +23,8 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule,
-  ],
+    provideFirebaseApp(()=> initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())],
       providers: [   
     NativeGeocoder,
     Geolocation,
