@@ -71,4 +71,94 @@ ion-datetime{
     background-color: #a8a8a8;
 }
 
-  
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    top: 80px;
+}
+
+.confirma{
+    position: relative;
+    width: 240px;
+    height: 234px;
+
+    top: 0px;
+
+    animation-name: expandir;
+    animation-duration: 2.5s;
+    animation-delay: 0.5;
+}
+
+.title_3{
+    position: absolute;
+    top: 42vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+}
+
+.text{
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+}
+
+@keyframes expandir{
+    0%   {width:240px; height:234px;}
+    50%  {top:-30px;width:320px; height:320px;}
+    100%    {width:240px; height:234px;}
+}
+
+.Titonlo{
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+  margin-left: 8%;
+}
+.title3{
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 800;
+}
+
+.lobelid{
+ margin-left: 25%;
+
+}
+.boletin{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.boletin ion-button{
+    color: #000;
+    border-radius: 30px;
+    border: 1px solid #000;
+    width: 80%;
+    font-family: 'Inika';
+    font-weight: 800;
+    margin-top: 20px; 
+}
+
+.boletin ion-button:hover{
+    color: #000;
+    transition: 0.5s ease;
+    background-color: #a8a8a8;
+}
+.title3 ion-input{
+    border: 1px solid #000;
+    border-radius:  10px;
+    width: 200px;
+    height: 100px;
+    margin-left: 25%;
+    margin-top: -35px;
+ 
+}
