@@ -122,30 +122,31 @@ ion-datetime{
     line-height: 31px;
   margin-left: 8%;
 }
+
 .title3{
     font-family: 'Inika';
     font-style: normal;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .lobelid{
  margin-left: 25%;
 
 }
-.boletin{
+.agendar{
     display: flex;
     justify-content: center;
     align-items: center;    
 }
 
-.boletin ion-button{
+.agendar ion-button{
+    position: relative;
+    bottom: 20px;
     color: #000;
     border-radius: 30px;
     border: 1px solid #000;
-    width: 80%;
     font-family: 'Inika';
-    font-weight: 800;
-    margin-top: 20px; 
+    font-weight: 800; 
 }
 
 .boletin ion-button:hover{
@@ -153,12 +154,14 @@ ion-datetime{
     transition: 0.5s ease;
     background-color: #a8a8a8;
 }
+
 .title3 ion-input{
     border: 1px solid #000;
     border-radius:  10px;
     width: 200px;
     height: 100px;
     margin-left: 25%;
-    margin-top: -35px;
+    margin-top: -30px;
+    margin-bottom: 30px;
  
 }

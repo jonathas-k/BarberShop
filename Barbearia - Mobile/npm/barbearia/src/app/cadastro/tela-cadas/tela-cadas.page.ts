@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesService } from 'src/app/service/services.service';
 import { User } from 'src/app/models/cadastro';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AlertController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-tela-cadas',
@@ -18,19 +20,38 @@ export class TelaCadasPage implements OnInit {
   constructor(
     private service:ServicesService, 
     private router:Router, 
-    private route:ActivatedRoute, 
-    private userBuilder:FormBuilder) { }
+    private userBuilder:FormBuilder,
+    private alertController: AlertController) { }
+
+    async presentAlert() {
+      const alert = await this.alertController.create({
+        header: 'Alerta!',
+        subHeader: 'Algo deu errado =(',
+        message: 'Por Favor, preencha todos os campos corretamente.',
+        buttons: ['Voltar'],
+      });
+  
+      await alert.present();
+    }
 
     signUp(data:User): void {
-      this.service.userSignUp(data);
+
+      if(this.userForm.valid){
+        this.service.userSignUp(data);
+        this.router.navigate(['/tela-login'])
+
+      }
+      else{
+        this.presentAlert()
+      }
     }
-    
+
     ngOnInit(){
 
       this.userForm = this.userBuilder.group({
         nome: ['',Validators.compose([Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern('[a-zA-Z]*')])],
         email: ['',Validators.compose([Validators.required,Validators.email])],
-        telefone: ['',Validators.compose([Validators.required, Validators.minLength(15)])],
+        telefone: ['',Validators.compose([Validators.required, Validators.minLength(14)])],
         senha: ['',Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(16)])]
       });
 

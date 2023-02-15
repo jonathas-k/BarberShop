@@ -27,15 +27,8 @@
   <ion-checkbox></ion-checkbox>
 
   <div id="lines2"></div>
-
-  <ion-item *ngFor="let dados of dados | async">
-    {{ dados.id }}
-    {{ dados.nome }}
-    {{ dados.email }}
-  </ion-item>
-
 </div>
-<ion-button id="botao" color="--ion-background-color:#323131;" routerLink="/tela-principal" (click)="List()">Confirmar</ion-button>
+<ion-button id="botao" color="--ion-background-color:#323131;" routerLink="/tela-principal" (click)="entrar()">Confirmar</ion-button>
 
 
 </ion-content>

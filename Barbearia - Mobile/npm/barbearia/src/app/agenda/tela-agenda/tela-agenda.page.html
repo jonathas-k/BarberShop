@@ -47,7 +47,7 @@
     <ion-list>   
         <h1 class="Titonlo">Cabelo</h1>
         <ion-item>
-          <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select Cabelo">
+          <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Selecione o Cabelo">
             <ion-select-option value="Corte Undercut">Corte Undercut</ion-select-option>
             <ion-select-option value="Corte Militar">Corte Militar</ion-select-option>
             <ion-select-option value="Corte Pompadour">Corte Pompadour</ion-select-option>
@@ -64,7 +64,7 @@
 
         <h1 class="Titonlo">Barba</h1>
         <ion-item>
-          <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select Barba">
+          <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Selecione a Barba">
             <ion-select-option value="Barba Tradiconal">Barba Tradiconal</ion-select-option>
             <ion-select-option value="Cavanhaque">Cavanhaque</ion-select-option>
             <ion-select-option value="Barba Arredondada">Barba Arredondada</ion-select-option>
@@ -83,7 +83,7 @@
         <h1 class="Titonlo">Tintura</h1>
      
       <ion-item>
-        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select Tintura">
+        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Selecione a Tintura">
           <ion-select-option value="Tintura Permanente">Tintura Permanente</ion-select-option>
           <ion-select-option value="Tintura Temporária">Tintura Temporária</ion-select-option>
           <ion-select-option value="Tonalizante">Tonalizante</ion-select-option>
@@ -97,7 +97,7 @@
         <h1 class="Titonlo">Depilação</h1>
     
       <ion-item>
-        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select Depilação">
+        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Selecione a Depilação">
           <ion-select-option value="Depilação c/ Cera">Depilação c/ Cera</ion-select-option>
           <ion-select-option value="Depilação c/ Pinça">Depilação c/ Pinça</ion-select-option>
           <ion-select-option value="Depilação c/ Lâmina">Depilação c/ Lâmina</ion-select-option>
@@ -111,7 +111,7 @@
     <h1 class="Titonlo" >Hidratação</h1>
  
   <ion-item>
-    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select Tintura">
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Selecione a Hidratação">
       <ion-select-option value="Hidrat. Profunda">Hidrat. Profunda</ion-select-option>
       <ion-select-option value="Hidrat. c/ Queratina">Hidrat. c/ Queratina</ion-select-option>
       <ion-select-option value="Hidrat. c/ Cauterização">Hidrat. c/ Cauterização</ion-select-option>
@@ -127,7 +127,10 @@
   <ion-input></ion-input>
 </div>
 
-<ion-button class="boletin" (click)="edit()">Agendar</ion-button>
+<div class="agendar">
+  <ion-button (click)="edit()"  color=" --ion-background-color: #fff;">Agendar</ion-button>
+</div>
+
 </div>
 
 
