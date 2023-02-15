@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicesService } from 'src/app/service/services.service';
+
 
 
 
@@ -9,9 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaLoginPage implements OnInit {
 
-  constructor() {}
 
-  entrar(){}
+  constructor(){}
+
+   
+  
 
   ngOnInit() {
   }
