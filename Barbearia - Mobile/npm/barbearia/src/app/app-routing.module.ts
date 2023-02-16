@@ -59,6 +59,22 @@ const routes: Routes = [
     path: 'tela-concluido',
     loadChildren: () => import('./concluido/tela-concluido/tela-concluido.module').then( m => m.TelaConcluidoPageModule)
   },
+  {
+    path: 'tela-barba',
+    loadChildren: () => import('./servicoBarba/tela-barba/tela-barba.module').then( m => m.TelaBarbaPageModule)
+  },
+  {
+    path: 'tela-tintura',
+    loadChildren: () => import('./servicoTintura/tela-tintura/tela-tintura.module').then( m => m.TelaTinturaPageModule)
+  },
+  {
+    path: 'tela-depilacao',
+    loadChildren: () => import('./servicoDepilacao/tela-depilacao/tela-depilacao.module').then( m => m.TelaDepilacaoPageModule)
+  },
+  {
+    path: 'tela-hidratacao',
+    loadChildren: () => import('./servicoHidratacao/tela-hidratacao/tela-hidratacao.module').then( m => m.TelaHidratacaoPageModule)
+  },
   
 ];
 

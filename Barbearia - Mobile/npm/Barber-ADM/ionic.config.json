@@ -1,0 +1,7 @@
+{
+  "name": "Barber-ADM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
