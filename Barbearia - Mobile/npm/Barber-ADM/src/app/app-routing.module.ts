@@ -20,8 +20,8 @@ const routes: Routes = [
     loadChildren: () => import('./Login/tela-login/tela-login.module').then( m => m.TelaLoginPageModule)
   },
   {
-    path: 'tela-cadastro',
-    loadChildren: () => import('./cadastro/tela-cadastro/tela-cadastro.module').then( m => m.TelaCadastroPageModule)
+    path: 'tela-cadas',
+    loadChildren: () => import('./cadastro/tela-cadas/tela-cadas.module').then( m => m.TelaCadasPageModule)
   },
 ];
 

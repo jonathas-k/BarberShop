@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TelaCadastroPage } from './tela-cadastro.page';
+import { TelaCadasPage } from './tela-cadas.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: TelaCadastroPage
+    component: TelaCadasPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class TelaCadastroPageRoutingModule {}
+export class TelaCadasPageRoutingModule {}

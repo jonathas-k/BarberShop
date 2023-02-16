@@ -21,7 +21,7 @@ export class TelaCadasPage implements OnInit {
     private service:ServicesService, 
     private router:Router, 
     private userBuilder:FormBuilder,
-    private alertController: AlertController) { }
+    private alertController: AlertController) {}
 
     async presentAlert() {
       const alert = await this.alertController.create({
