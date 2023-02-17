@@ -36,13 +36,12 @@ export class TelaCadasPage implements OnInit {
 
     signUp(data:User): void {
 
-      if(this.userForm.valid){
-        this.service.userSignUp(data);
-        this.router.navigate(['/tela-login'])
-
+      if(this.userForm.invalid){
+        this.presentAlert()
       }
       else{
-        this.presentAlert()
+        this.service.userSignUp(data);
+        this.router.navigate(['/tela-login'])
       }
     }
 

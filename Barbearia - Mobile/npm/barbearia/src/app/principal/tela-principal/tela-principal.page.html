@@ -69,7 +69,12 @@
 
   <!--  -->
   <ion-content class="body">
-    <ion-label class="bemVindo">Olá Bem-Vindo(a),<br>Name</ion-label>
+    <ion-label class="bemVindo">Olá Bem-Vindo(a),</ion-label>
+    <ion-list class="select">
+      <ion-item *ngFor="let consulta of consultas | async" lines="none">
+        {{consulta.nome}}
+      </ion-item>
+    </ion-list>
     <img class="userP" src="assets/imagens/userPerfil.png" alt="Foto_Perfil">
     <div class="lines1"></div>
 

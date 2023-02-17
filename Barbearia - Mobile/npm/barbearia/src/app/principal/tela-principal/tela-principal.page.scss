@@ -53,6 +53,17 @@ ion-menu{
     top: 20px;
 }
 
+.select{
+    position: relative;
+    top: 60px;
+}
+
+.select ion-item{
+    font-family: 'Inika';
+    font-weight: 600;
+    font-size: 25px;
+}
+
 .lines1{
     position: absolute;
     width: 280px;

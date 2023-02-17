@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/models/cadastro';
+import { Admin } from 'src/app/models/cadastro';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
@@ -12,9 +12,7 @@ import { ServicesService } from 'src/app/service/tela-service.service';
   styleUrls: ['./tela-cadas.page.scss'],
 })
 export class TelaCadasPage implements OnInit {
-  user = [];
-  public userForm: FormGroup;
-
+ 
   constructor(
     private service:ServicesService,
     private router:Router,
@@ -22,37 +20,30 @@ export class TelaCadasPage implements OnInit {
     private alertController: AlertController
   ) { }
 
-  async presentAlert() {
-    const alert = await this.alertController.create({
-      header: 'Alerta!',
-      subHeader: 'Algo deu errado =(',
-      message: 'Por Favor, preencha todos os campos corretamente.',
-      buttons: ['Voltar'],
-    });
+  // async presentAlert() {
+  //   const alert = await this.alertController.create({
+  //     header: 'Alerta!',
+  //     subHeader: 'Algo deu errado =(',
+  //     message: 'Por Favor, preencha todos os campos corretamente.',
+  //     buttons: ['Voltar'],
+  //   });
 
-    await alert.present();
-  }
+  //   await alert.present();
+  // }
 
-  signUp(data:User): void {
-
-    if(this.userForm.valid){
+  signUp(data:Admin): void {
       this.service.userSignUp(data);
       this.router.navigate(['/tela-login'])
-
-    }
-    else{
-      this.presentAlert()
-    }
   }
 
   ngOnInit() {
 
-    this.userForm = this.userBuilder.group({
-      nome: ['',Validators.compose([Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern('[a-zA-Z]*')])],
-      email: ['',Validators.compose([Validators.required,Validators.email])],
-      telefone: ['',Validators.compose([Validators.required, Validators.minLength(14)])],
-      senha: ['',Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(16)])]
-    });
+    // this.userForm = this.userBuilder.group({
+    //   nome: ['',Validators.compose([Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern('[a-zA-Z]*')])],
+    //   email: ['',Validators.compose([Validators.required,Validators.email])],
+    //   telefone: ['',Validators.compose([Validators.required, Validators.minLength(14)])],
+    //   senha: ['',Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(16)])]
+    // });
   }
 
 }

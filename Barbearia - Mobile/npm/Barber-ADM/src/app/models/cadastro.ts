@@ -1,7 +1,5 @@
-export class User {
+export class Admin {
     id!: string;
     nome!: string;
-    email!: string;
-    telefone!: number;
     senha!: string;
   }

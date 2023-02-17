@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { collection, doc, Firestore, setDoc} from '@angular/fire/firestore';
-import { User } from 'src/app/models/cadastro';
+import { Admin } from 'src/app/models/cadastro';
 
 
 
@@ -14,8 +14,8 @@ export class ServicesService {
 
 
   // Create
-  userSignUp(data: User){
-    const document = doc (collection(this.firestore, 'Users'));
+  userSignUp(data: Admin){
+    const document = doc (collection(this.firestore, 'Admin'));
     return setDoc(document, data);    
   }
 

@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
-import { collection, doc, Firestore, setDoc} from '@angular/fire/firestore';
+import { collection, collectionData, doc, Firestore, setDoc} from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 import { User } from 'src/app/models/cadastro';
-
+import { map } from 'rxjs/operators'
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
+  valor: string
   
   constructor(
     private firestore: Firestore) {}
@@ -17,6 +19,19 @@ export class ServicesService {
   userSignUp(data: User){
     const document = doc (collection(this.firestore, 'Users'));
     return setDoc(document, data);    
+  }
+
+  // Read
+  getContacts(): Observable<User[]> {
+    const contactsCollection = collection(this.firestore, 'Users');
+    return collectionData(contactsCollection, {idField: 'id'}).pipe(
+      map(contacts => contacts as User[])
+    );
+  }
+
+  pegarValor(valor:string){
+    this.valor = valor
+    console.log(valor)
   }
 
   }
