@@ -22,26 +22,26 @@
     </div>
 
     <!-- Nome --> 
-    <ion-item class="perfil" lines="none">
-      <ion-label class="titulo" position="floating">Nome:</ion-label>
+    <ion-item class="perfil" lines="none" *ngFor="let consulta of consultas | async">
+      <ion-label class="titulo" position="floating">Nome: {{consulta.nome}} </ion-label>
       <img src="assets/imagens/user.png" alt="">
     </ion-item>
 
     <!-- Email -->
-    <ion-item class="perfil" lines="none">
-      <ion-label class="titulo" position="floating">Email:</ion-label>
+    <ion-item class="perfil" lines="none" *ngFor="let consulta of consultas | async">
+      <ion-label class="titulo" position="floating">Email: {{consulta.email}}</ion-label>
       <img src="assets/imagens/email.png" alt="">
     </ion-item>
 
   <!-- Senha -->
-    <ion-item class="perfil" lines="none">
-      <ion-label class="titulo" position="floating">Senha:</ion-label>
+    <ion-item class="perfil" lines="none" *ngFor="let consulta of consultas | async">
+      <ion-label class="titulo" position="floating">Senha: {{consulta.senha}}</ion-label>
       <img src="assets/imagens/senha.png" alt="">
     </ion-item>
     
   <!-- Telefone -->
-    <ion-item class="perfil" lines="none">
-      <ion-label class="titulo" position="floating">Telefone:</ion-label>
+    <ion-item class="perfil" lines="none" *ngFor="let consulta of consultas | async">
+      <ion-label class="titulo" position="floating">Telefone: {{consulta.telefone}}</ion-label>
       <img src="assets/imagens/telefone.png" alt="">
     </ion-item>
   </div>
