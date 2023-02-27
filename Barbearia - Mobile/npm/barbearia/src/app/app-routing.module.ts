@@ -79,6 +79,14 @@ const routes: Routes = [
     path: 'tela-pix',
     loadChildren: () => import('./pix/tela-pix/tela-pix.module').then( m => m.TelaPixPageModule)
   },
+  {
+    path: 'tela-contato',
+    loadChildren: () => import('./contato/tela-contato/tela-contato.module').then( m => m.TelaContatoPageModule)
+  },
+  {
+    path: 'tela-rede-social',
+    loadChildren: () => import('./redesSociais/tela-rede-social/tela-rede-social.module').then( m => m.TelaRedeSocialPageModule)
+  },
 ];
 
 @NgModule({

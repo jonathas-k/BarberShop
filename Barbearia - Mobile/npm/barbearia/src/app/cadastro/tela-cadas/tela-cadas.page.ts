@@ -15,6 +15,7 @@ export class TelaCadasPage implements OnInit {
   user = [];
   segId = "overview";
   public userForm: FormGroup;
+  public editMode = false
 
 
   constructor(
@@ -35,20 +36,31 @@ export class TelaCadasPage implements OnInit {
     }
 
     signUp(data:User): void {
+switch (this.editMode){
+  case false:
+  this.editMode = true
+  break
 
-      if(this.userForm.invalid){
-        this.presentAlert()
-      }
-      else{
-        this.service.userSignUp(data);
-        this.router.navigate(['/tela-login'])
-      }
-    }
+  case true:
+    this.editMode = false
+    break
+  }
+
+  if(this.userForm.valid){
+    this.service.userSignUp(data);
+    this.router.navigate(['/tela-login'])
+   
+  }
+  else{
+    this.presentAlert()
+  }
+
+}
 
     ngOnInit(){
 
       this.userForm = this.userBuilder.group({
-        nome: ['',Validators.compose([Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern('[a-zA-Z]*')])],
+        nome: ['',Validators.compose([Validators.required,Validators.minLength(3),Validators.maxLength(50),Validators.pattern('[a-zA-Z]*')])],
         email: ['',Validators.compose([Validators.required,Validators.email])],
         telefone: ['',Validators.compose([Validators.required, Validators.minLength(14)])],
         senha: ['',Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(16)])]
