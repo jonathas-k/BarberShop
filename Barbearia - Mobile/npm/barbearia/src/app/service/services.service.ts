@@ -29,10 +29,5 @@ export class ServicesService {
     );
   }
 
-  pegarValor(valor:string){
-    this.valor = valor
-    console.log(valor)
-  }
-
   }
 

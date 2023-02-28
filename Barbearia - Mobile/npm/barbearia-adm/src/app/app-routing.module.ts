@@ -48,6 +48,34 @@ const routes: Routes = [
     path: 'concluido',
     loadChildren: () => import('./concluido/concluido.module').then( m => m.ConcluidoPageModule)
   },
+  {
+    path: 'tela-cabelo',
+    loadChildren: () => import('./cabelo/tela-cabelo/tela-cabelo.module').then( m => m.TelaCabeloPageModule)
+  },
+  {
+    path: 'tela-barba',
+    loadChildren: () => import('./barba/tela-barba/tela-barba.module').then( m => m.TelaBarbaPageModule)
+  },
+  {
+    path: 'tela-tintura',
+    loadChildren: () => import('./tintura/tela-tintura/tela-tintura.module').then( m => m.TelaTinturaPageModule)
+  },
+  {
+    path: 'tela-depilacao',
+    loadChildren: () => import('./depilacao/tela-depilacao/tela-depilacao.module').then( m => m.TelaDepilacaoPageModule)
+  },
+  {
+    path: 'tela-hidratacao',
+    loadChildren: () => import('./hidratacao/tela-hidratacao/tela-hidratacao.module').then( m => m.TelaHidratacaoPageModule)
+  },
+  {
+    path: 'tela-contato',
+    loadChildren: () => import('./contato/tela-contato/tela-contato.module').then( m => m.TelaContatoPageModule)
+  },
+  {
+    path: 'tela-rede-social',
+    loadChildren: () => import('./redesSociais/tela-rede-social/tela-rede-social.module').then( m => m.TelaRedeSocialPageModule)
+  },
   // {
   //   path: 'servicos',
   //   loadChildren: () => import('./servicos/servicos/servicos.module').then( m => m.ServicosPageModule)

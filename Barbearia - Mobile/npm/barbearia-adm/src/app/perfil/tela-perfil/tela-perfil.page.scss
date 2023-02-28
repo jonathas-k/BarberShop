@@ -31,7 +31,7 @@
 .userP{
     position: relative;
     left: 6.5rem;
-    top: 1rem;
+    top: 0rem;
     width: 7rem;
     height: 7rem;
     
@@ -44,7 +44,7 @@
     height: 3rem;
     position: relative;
     left: 10.5rem;
-    top: -2.5rem;
+    top: -3.5rem;
 }
 
 .camera{
@@ -57,16 +57,18 @@
 
 .perfil{
     position: relative;
-    top: -40px;
-    
+    top: -55px;   
 }
 
 .titulo{
     font-family: 'Inika';
     font-style: normal;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 20px;
+    line-height: 42px;  
+    width: 250px;
 }
+
 
 ion-input{
     height: 20px;
@@ -82,9 +84,7 @@ ion-input{
 }
 
 .position{
-    position: relative;
     top: -1.6rem;
-    left: 15rem;
 }
 
 .lines{
@@ -121,28 +121,4 @@ ion-input{
     top: 50rem;
     width: 1rem;
     height: 1rem;
-}
-
-.select{
-    position: relative;
-    padding: 20px;
-    
-    width: 320px;
-    height: 100px;
-
-}
-
-.select:hover{
-    position: relative;
-    padding: 20px;
-    padding-top: 40px;
-
-    left: 10px;
-    top: -20px;
-
-    width: 300px;
-    height: 120px;
-    
-    border-radius: 30px;
-    background-color: #D9D9D9;
 }

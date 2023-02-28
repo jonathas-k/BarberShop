@@ -1,4 +1,4 @@
-.fundo{
+.body{
     --ion-background-color:#323131;
 }
 
@@ -11,6 +11,11 @@
     background: #D9D9D9;
     border-radius: 30px;
     
+    
+}
+
+.seta{
+    cursor: pointer;
 }
 
 #voltar{
@@ -214,9 +219,40 @@ ion-checkbox::part(container) {
     position: absolute;
     width: 215px;
     height: 69px;
-    left: 50px;
-    top: 580px;
+    left: 34px;
+    top: 550px;
     background: #323131;
     border: 2px solid #FFFFFF;
     border-radius: 30px;
+}
+
+// Validação
+.valid_name{
+    position: relative;
+    top: 55px;
+    left: 15px;
+    font-family: 'Inika';
+
+}
+
+.valid_email{
+    position: fixed;
+    top: 265px;
+    left: 35px;
+    font-family: 'Inika';
+}
+
+.valid_tel{
+    position: fixed;
+    top: 380px;
+    left: 35px;
+    font-family: 'Inika';
+}
+
+.valid_senha{
+    position: fixed;
+    top: 485px;
+    left: 35px;
+    font-family: 'Inika';
+
 }
