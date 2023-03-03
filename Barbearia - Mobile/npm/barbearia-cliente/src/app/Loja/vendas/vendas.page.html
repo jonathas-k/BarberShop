@@ -1,0 +1,150 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button class="voltar" color="--ion-background-color:#323131;" routerLink="/tela-principal">
+      <img id="img_voltar" src="assets/imagens/voltar.png" alt="">
+    </ion-button>
+    <img class="logo" src="assets/imagens/logo.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <div class="container">
+    <img src="assets/imagens/creme.png" alt="">
+    <h3><b>Vendas</b></h3>
+    <div class="line"></div>
+
+    <div class="produtos-line1">
+      <h6><b>Kit GB Men <br> Fresh Banho</b></h6>
+        <img src="assets/imagens/kit-gb.png" alt="">
+        <h6><b>R$126,50</b></h6>
+        <ion-button color="dark" shape="round" expand="block" (click)="setOpen(true)">COMPRAR</ion-button>
+
+      <h6> <b> 3DMen <br> Argila <br> Texturizante </b></h6>
+      <img class="pomada" src="assets/imagens/pomada.png" alt="">
+      <h6><b>R$90,90</b></h6>
+      <ion-button color="dark" shape="round">COMPRAR</ion-button>
+
+      <h6> <b> Shower gel  <br> viking midgard </b></h6>
+      <img class="pomada" src="assets/imagens/sabonete.png" alt="">
+      <h6><b>R$60,50</b></h6>
+      <ion-button color="dark" shape="round">COMPRAR</ion-button>
+
+      
+      <h6> <b> Creme american <br> crew skin <br> moisturizer <br> shave</b></h6>
+      <img class="pomada" src="assets/imagens/creme de barbear.png" alt="">
+      <h6><b>R$55,90</b></h6>
+      <ion-button color="dark" shape="round">COMPRAR</ion-button>
+
+    </div>
+
+    <div class="line2"></div>
+
+    <div class="produtos-line2">
+      <h6><b>Sérum <br> Crescimento <br> Capilar</b></h6>
+      <img class="serum" src="assets/imagens/serum.png" alt="">
+      <h6><b>R$60,90</b></h6>
+        <ion-button color="dark" shape="round" routerLink="/tela-comprar">COMPRAR</ion-button>
+
+        <h6><b>Kit L'Oréal <br> Blondifier <br> Essential </b></h6>
+      <img class="serum" src="assets/imagens/kit-loreal.png" alt="">
+      <h6><b>R$60,90</b></h6>
+        <ion-button color="dark" shape="round">COMPRAR</ion-button>
+
+        <h6><b>Gel esfoliante <br> dicolore  <br> barboterapia </b></h6>
+        <img class="serum" src="assets/imagens/gel esfoliante.png" alt="">
+        <h6><b>R$75,90</b></h6>
+          <ion-button color="dark" shape="round">COMPRAR</ion-button>
+
+          <h6><b>Monolith + <br> Antissinais <br> FPS30 Futura <br> Biotech</b></h6>
+          <img class="serum" src="assets/imagens/creme antissinais.png" alt="">
+          <h6><b>R$135,0</b></h6>
+            <ion-button color="dark" shape="round">COMPRAR</ion-button>
+    </div>
+  </div>
+
+  <ion-content class="ion-padding">
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Modal</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="setOpen(false)">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <h3>Sérum Crescimento Capilar</h3>
+
+          <div class="produto">
+            <img src="assets/imagens/serum.png" alt="">
+            <h4>R$60,90</h4>
+            <p> <br> Sérum De Crescimento Capilar Masculino X E6801 30 Ml <br> Sérum C</p>
+          </div>
+        
+          <!-- Aumentar ou Diminuir a Quantidade de itens -->
+          <div class="quant">
+            <ion-button mode="ios" color="--ion-background-color: #fff;">
+            <ion-icon name="remove-circle-outline"></ion-icon>
+          </ion-button>
+            <p>1x</p>
+            <ion-button mode="ios" color="--ion-background-color: #fff;">
+            <ion-icon name="add-circle-outline"></ion-icon>
+          </ion-button>
+        </div>
+        
+        <div class="lines">
+          <div class="line"></div>
+        </div>
+        
+        
+        <div class="detalhes-pagamento">
+          <h5>Detalhes do Pagamento</h5>
+        
+          <div class="sub-total-prod">
+            <h6>Subtotal dos Produtos</h6>
+            <p>R$60,90</p>
+          </div>
+        
+          <div class="sub-total-frete">
+            <h6>Subtotal do Frete</h6>
+            <p>R$7,90</p>
+          </div>
+        
+          <div class="total">
+            <h5>Pagamento Total</h5>
+            <p>R$68,80</p>
+          </div>
+        </div>
+        
+        <div class="lines2">
+          <div class="line2"></div>
+        </div>
+        
+        <div class="pagamento">
+          <h5>Opções de Pagamento</h5>
+        
+          <ion-item lines="none" routerLink="/tela-pix">
+            <h6>Gerar Pix</h6>
+          </ion-item>
+        
+          <ion-item lines="none" routerLink="#">
+            <h6>Cartão de Crédito</h6>
+          </ion-item>
+        </div>
+        
+        <div class="lines3">
+          <div class="line3"></div>
+        </div>
+        
+        <div class="finalizar">
+          <ion-button color="--ion-background-color: #323131;" routerLink="/tela-concluido">Finalizar Pedido</ion-button>
+        </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </ion-content>
+
+
+
+</ion-content>
