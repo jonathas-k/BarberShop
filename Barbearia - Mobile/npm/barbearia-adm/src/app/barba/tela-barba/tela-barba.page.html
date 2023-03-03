@@ -7,9 +7,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="body">
-
-   <ion-button class="buttonEdit" (click)="edit()" color="--ion-background-color:#323131;">Editar</ion-button>
+<ion-content class="body" mode="ios"> 
+   <ion-button class="buttonAdd" (click)="enviarDados()" color="--ion-background-color:#323131;">Criar</ion-button>
+   <ion-button class="buttonEdit" (click)="setOpen(true)" color="--ion-background-color:#323131;">Editar</ion-button>
 
  <!-- <div> começo da tela cabelo -->
   <div class="title">
@@ -99,4 +99,38 @@
       <ion-note slot="end">R$25</ion-note>
      </ion-item>
     </div>
+
+    <!-- Início do Modal -->
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Editar Serviço</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="setOpen(false)">Voltar</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="body">
+         <ion-list>   
+           <h1 class="Titulo_Servico">Selecionar Serviço</h1>
+           <ion-item>
+            <ion-select [multiple]="true" placeholder="Selecione a Barba">
+              <ion-select-option value="Barba Tradiconal">Barba Tradiconal</ion-select-option>
+              <ion-select-option value="Cavanhaque">Cavanhaque</ion-select-option>
+              <ion-select-option value="Barba Arredondada">Barba Arredondada</ion-select-option>
+              <ion-select-option value="Barba Degradê">Barba Degradê</ion-select-option>
+              <ion-select-option value="Van Dyke">Van Dyke</ion-select-option>
+              <ion-select-option value="Barba Encaixada">Barba Encaixada</ion-select-option>
+              <ion-select-option value="Balbo">Balbo</ion-select-option>
+              <ion-select-option value="Barba Lenhador">Barba Lenhador</ion-select-option>
+              <ion-select-option value="Bigode Original">Bigode Original</ion-select-option>
+              <ion-select-option value="Costeletas Evidentes">Costeletas Evidentes</ion-select-option>
+          </ion-select>
+        </ion-item>
+         </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+    <!-- Fim do Modal -->
 </ion-content>

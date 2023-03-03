@@ -43,15 +43,12 @@ h3{
     font-size: 20px;
 }
 
-ion-item::part(native){
-    border-bottom: #000 2px solid;
-}
-
 .itens{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    border-bottom: #000 2px solid;
 }
 
 .field{
@@ -99,4 +96,15 @@ ion-item::part(native){
 
 }
 
-  
+.Titulo_Servico{
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    margin-left: 6%;
+}
+
+.ion-padding ion-item{
+    margin-bottom: 20px;
+}

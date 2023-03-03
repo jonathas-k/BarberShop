@@ -7,23 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaAgendaPage implements OnInit {
   
-  isWeekday = (dateString: string) => {
-    const date = new Date(dateString);
-    const utcDay = date.getUTCDay();
-
-    /**
-     * Date will be enabled if it is not
-     * Sunday or Saturday
-     */
-    return utcDay > 0;
+  customPopoverOptions = {
+    header: 'escolha o serviço',
+    subHeader: 'agendamentos rapidos',
+    message: '',
   };
 
+  public editMode = 1
+
   constructor() { }
-      
-  
+
+  edit(){
+    switch (this.editMode){
+      case 1:
+        this.editMode = 2;
+        break;
+
+      case 2:
+        this.editMode = 3;
+        break;
+    }
+  }
+
+  tela(){
+    this.editMode = 1
+  }
+
   ngOnInit() {
 
-
-  }
-    
+}
 }

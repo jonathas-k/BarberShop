@@ -42,5 +42,11 @@ export class ServicesService {
     );
   }
 
+  getServicoByIndex(index: number): Observable<Servicos> {
+    return this.getServicos().pipe(
+      map(servicos => servicos[index.valueOf()])
+    );
+  }
+
   }
 
